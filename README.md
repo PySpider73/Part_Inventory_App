@@ -6,4 +6,4 @@ I am new to Python programming and have no formal background. I use projects lik
 
 I am trying to learn how to organize my application structure. I was looking at ![Tom Schimansky's GuitarTuner](https://github.com/TomSchimansky/GuitarTuner) to get a better idea of what files and folders are needed/required and how to structure it all. If anyone would like to help with that, I'd greatly appreciate it!
 
-![Parts Inventory Application](documentation/readme_images/Parts_Inventory_App.png)
+![Parts Inventory Application.](documentation/readme_images/Parts_Inventory_App.png)
