@@ -33,10 +33,10 @@ import database
 # Default colors.
 color_def1 = "#ffffff"
 color_def2 = "#000000"
-color_def3 = "lightgray"  # used a lot on button bg and fg colors
+color_def3 = "lightgray"
 color_def4 = "silver"
 # Most used colors.
-color_1 = "#1a1a1a"  # background color for main window and behind button/text
+# color_1 = "#1a1a1a"  # not currently used. background color for main window and behind button/text
 color_2 = "#1a2238"  # background color header and side frame
 color_3 = "#9daaf2"  # background color for treeview odd rows
 color_4 = "#ff6a3d"  # Button hover color light orange
