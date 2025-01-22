@@ -36,18 +36,18 @@ color_def2 = "#000000"
 color_def3 = "lightgray"
 color_def4 = "silver"
 # Most used colors.
-# color_1 = "#1a1a1a"  # not currently used. background color for main window and behind button/text
-color_2 = "#1a2238"  # background color header and side frame
-color_3 = "#9daaf2"  # background color for treeview odd rows
-color_4 = "#ff6a3d"  # Button hover color light orange
-color_5 = "#f4db7d"  # used a lot on button bg and fg colors
+color_1 = "#6a6262"  # background color for main window and behind button/text
+color_2 = "#4b3b47"  # background color header
+color_3 = "#9c9990"  # background color for treeview odd rows
+color_4 = "#e0d8de"  # Button hover color light orange
+color_5 = "#cfd2b2"  # used a lot on button bg and fg colors
 
 
 ####################################################################################################
 ########### Creating the Window Frame ##############################################################
 root = tk.Tk()
 root.geometry("900x600+300+250")  # This will set the size of the window.
-root.configure(bg="#293148")
+root.configure(bg=color_1)
 root.resizable(0, 0)  # This will make the window non-resizable.
 root.title("Parts Inventory Application")  # This will set the title of the window.
 root.iconbitmap("assets/images/pyspider73.ico")  # Windows Icon
@@ -335,11 +335,11 @@ root.logoutLink.place(x=785, y=25)
 
 root.midFrame1 = customtkinter.CTkFrame(
     root,
-    bg_color=color_2,
+    bg_color=color_1,
     fg_color=color_5,
     corner_radius=10,
     border_width=4,
-    border_color=color_4,
+    border_color=color_2,
     width=400,
     height=130,
 )
@@ -428,37 +428,15 @@ root.midFrame1.place(
 ####### Buttons ####################################################################################
 
 ####################################################################################################
-# This is the Clear Button.
-
-root.clearLink = customtkinter.CTkButton(
-    root.midFrame1,
-    text_color=color_def2,
-    bg_color=color_2,
-    fg_color=color_4,
-    hover_color="#fe8864",  # Set the hover color for the button
-    width=210,
-    height=4,
-    border_color=color_2,
-    border_width=2,
-    cursor="hand2",
-    text="Clear Fields",
-    font=(font_3),
-    command=lambda: clear(True),
-)
-
-root.clearLink.place(x=30, y=60)
-
-
-####################################################################################################
 # This is the Add New Button.
 
 root.addLink = customtkinter.CTkButton(
     root.midFrame1,
     corner_radius=50,
     text_color=color_def2,
-    bg_color=color_2,
+    bg_color=color_5,
     fg_color=color_4,
-    hover_color="#fe8864",  # Set the hover color for the button
+    hover_color=color_def3,  # Set the hover color for the button
     width=100,
     height=4,
     border_color=color_2,
@@ -469,7 +447,7 @@ root.addLink = customtkinter.CTkButton(
     command=lambda: (insert(), clear(True)),
 )
 
-root.addLink.place(x=30, y=95)
+root.addLink.place(x=30, y=60)
 
 ####################################################################################################
 # This is the Update Button.
@@ -477,9 +455,9 @@ root.addLink.place(x=30, y=95)
 root.updateLink = customtkinter.CTkButton(
     root.midFrame1,
     text_color=color_def2,
-    bg_color=color_2,
+    bg_color=color_5,
     fg_color=color_4,
-    hover_color="#fe8864",  # Set the hover color for the button
+    hover_color=color_def3,  # Set the hover color for the button
     # corner_radius=30,
     width=100,
     height=4,
@@ -492,8 +470,29 @@ root.updateLink = customtkinter.CTkButton(
     # This will update the fields and then clear the text fields after button pressed.
 )
 
-root.updateLink.place(x=140, y=95)
+root.updateLink.place(x=140, y=60)
 
+
+####################################################################################################
+# This is the Clear Button.
+
+root.clearLink = customtkinter.CTkButton(
+    root.midFrame1,
+    text_color=color_def2,
+    bg_color=color_5,
+    fg_color=color_4,
+    hover_color=color_def3,  # Set the hover color for the button
+    width=210,
+    height=4,
+    border_color=color_2,
+    border_width=2,
+    cursor="hand2",
+    text="Clear Fields",
+    font=(font_3),
+    command=lambda: clear(True),
+)
+
+root.clearLink.place(x=30, y=95)
 
 ####################################################################################################
 # This is the Delete Button.
@@ -501,9 +500,9 @@ root.updateLink.place(x=140, y=95)
 root.deleteLink = customtkinter.CTkButton(
     root.midFrame1,
     text_color=color_def2,
-    bg_color=color_2,
+    bg_color=color_5,
     fg_color=color_4,
-    hover_color="#fe8864",  # Set the hover color for the button
+    hover_color=color_def3,  # Set the hover color for the button
     # corner_radius=30,
     width=100,
     height=4,
@@ -523,9 +522,9 @@ root.deleteLink.place(x=260, y=60)
 root.deleteAllLink = customtkinter.CTkButton(
     root.midFrame1,
     text_color=color_def2,
-    bg_color=color_2,
+    bg_color=color_5,
     fg_color=color_4,
-    hover_color="#fe8864",  # Set the hover color for the button
+    hover_color=color_def3,  # Set the hover color for the button
     # corner_radius=30,
     width=100,
     height=4,
@@ -545,11 +544,11 @@ root.deleteAllLink.place(x=260, y=95)
 
 root.midFrame2 = customtkinter.CTkFrame(
     root,
-    bg_color="#293148",
+    bg_color=color_1,
     fg_color=color_5,
     corner_radius=10,
     border_width=4,
-    border_color=color_4,
+    border_color=color_2,
     width=400,
     height=130,
 )
@@ -630,9 +629,9 @@ entry.place(
 root.searchButton = customtkinter.CTkButton(
     root.midFrame2,
     text_color=color_def2,
-    bg_color=color_2,
+    bg_color=color_5,
     fg_color=color_4,
-    hover_color="#fe8864",
+    hover_color=color_def3,
     # corner_radius=30,
     width=100,
     height=4,
@@ -653,9 +652,9 @@ root.searchButton.place(x=30, y=80)
 root.showAllButton = customtkinter.CTkButton(
     root.midFrame2,
     text_color=color_def2,
-    bg_color=color_2,
+    bg_color=color_5,
     fg_color=color_4,
-    hover_color="#fe8864",  # Set the hover color for the button
+    hover_color=color_def3,  # Set the hover color for the button
     # corner_radius=30,
     width=100,
     height=4,
@@ -690,9 +689,9 @@ textLable.place(x=265, y=15)
 root.exportLink = customtkinter.CTkButton(
     root.midFrame2,
     text_color=color_def2,
-    bg_color=color_2,
+    bg_color=color_5,
     fg_color=color_4,
-    hover_color="#fe8864",  # Set the hover color for the button
+    hover_color=color_def3,  # Set the hover color for the button
     # corner_radius=30,
     width=100,
     height=4,
@@ -713,9 +712,9 @@ root.exportLink.place(x=280, y=45)
 root.importLink = customtkinter.CTkButton(
     root.midFrame2,
     text_color=color_def2,
-    bg_color=color_2,
+    bg_color=color_5,
     fg_color=color_4,
-    hover_color="#fe8864",  # Set the hover color for the button
+    hover_color=color_def3,  # Set the hover color for the button
     width=100,
     height=4,
     border_color=color_2,
@@ -776,10 +775,10 @@ style.configure(
 style.configure(
     "Treeview",
     foreground=color_def1,
-    fieldbackground=color_2,
+    fieldbackground=color_5,
     background=(["selected", color_3]),
 )
-style.map("Treeview", background=[("selected", color_5)])
+style.map("Treeview", background=[("selected", "green")])
 
 tree = ttk.Treeview(
     root,
