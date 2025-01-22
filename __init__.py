@@ -1,5 +1,5 @@
 from .database import create_table, fetch_inventory, insert_part_numbers, search
-from .inventory import Inventory, Part, export_to_excel, search_part_numbers, show_all
+from .main import Inventory, Part, export_to_excel, search_part_numbers, show_all
 
 # Initialize the database and perform initial setup
 create_table()
